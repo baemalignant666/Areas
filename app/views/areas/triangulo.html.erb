@@ -1,0 +1,20 @@
+<div class="descripcion">
+   <h2> Triangulo </h2>
+   <h3>Digite la Información del table Triangulo </h3>
+
+	<%=form_tag({:controller => "areas", :action => "triangulo"}, :method => "get") do %>
+	<%= label_tag "alturaTag", "Altura" %>
+	<%= text_field_tag "altura", "", :required => "required" %>
+	<p></p>
+	<%= label_tag "baseTag", "Base" %>
+	<%= text_field_tag "base", "", :required => "required" %>
+	<p></p>
+	<%= submit_tag "Calcular" %>
+
+	<% end %>
+
+	<% if @altura %>
+    	<p> "El Area es... <%= @resultado %>  " </p>
+	<% end %>
+
+</div>

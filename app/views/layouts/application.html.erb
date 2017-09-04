@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<STYLE TYPE="text/css" MEDIA=screen>
+
+  body {     background-color: #B6BCC9;  }
+
+
+
+  #cont {
+
+    background-color: #fff;     width: 900px;
+    margin: 0px auto 0px auto;
+    padding: 10px;     border: solid 1px #ccc;
+    box-shadow: 1px 1px 5px #000;     -moz-box-shadow: 1px 1px 5px #000;
+    -webkit-box-shadow: 1px 1px 5px #000;
+    font-weight: 600;
+    font-family:  Vegur, 'PT Sans', Verdana, Sans-serif;
+    overflow: hidden;
+    3px solid green;
+   }
+
+
+
+
+    section .descripcion p {
+       text-align: justify;  }  .clear {     clear: both;  }
+
+ </STYLE>
+
+  <body>
+  	<div id="cont">
+  		<section>
+        <h1>Calculador de Areas</h1>
+        <%= link_to "Triangulo",:controller=>"areas",:action=>"triangulo" %>
+        <%= link_to "Rectangulo",:controller=>"areas",:action=>"rectangulo" %>
+        <%= link_to "Circulo",:controller=>"areas",:action=>"circulo" %>
+    		<%= yield %>
+    	</section>
+    </div>
+    </body>
+</html>

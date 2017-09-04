@@ -1,0 +1,17 @@
+<div class="descripcion">
+   <h2> Circulo </h2>
+   <h3>Digite la Información del circulo </h3>
+
+	<%=form_tag({:controller => "areas", :action => "circulo"}, :method => "get") do %>
+	<%= label_tag "radiotag", "Radio" %>
+	<%= text_field_tag "radio", "", :required => "required" %>
+	<p></p>
+	<%= submit_tag "Calcular" %>
+
+	<% end %>
+
+	<% if @radio %>
+    	<p> "El area es... <%= @resultado %>  " </p>
+	<% end %>
+
+</div>
